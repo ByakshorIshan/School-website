@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://vidyavalley.com/wp-content/uploads/2020/11/logo1-1.png" alt="">
+        </div>
+        <span class="label">Login Page</span>
+    </header>
+    <main>
+        <div class="form-container">
+            <form method="POST">
+                <h1>Login</h1>
+                {% if error %}
+                    <div class="error-box">
+                        <p>Email or password is incorrect!</p>
+                    </div>
+                {% endif %}
+                <div class="input-field">
+                    <ion-icon name="mail"></ion-icon>
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

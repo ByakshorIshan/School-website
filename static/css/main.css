@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --red: #e72d2d;
+  --green: #6ef56e;
+  --blue: #1f87e8;
+}
+
+body {
+  min-height: 95vh;
+  background: var(--green);
+}
+
+main {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  position: sticky;
+}
+
+header .logo img {
+  width: 230px;
+  height: auto;
+}
+
+header .label {
+  color: black;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 420px) {
+  header .logo img {
+    width: 175px;
+    height: auto;
+  }
+
+  header .label {
+    color: black;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
